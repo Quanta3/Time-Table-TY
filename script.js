@@ -8,8 +8,8 @@ const reference = document.querySelector("#reference");
 const parent = document.querySelector(".table");
 const empty = document.querySelector("#em");
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-//let day = weekday[(new Date()).getDay()];
-let day = "Tuesday"
+let day = weekday[(new Date()).getDay()];
+//let day = "Tuesday"
 let p = document.querySelectorAll(".period");
 
 let cur_slot_global = find_slots();
@@ -204,6 +204,7 @@ function find_slots(){
     }
     else if(timeInt<800){
         return 0 - Math.floor((800 - timeInt)/100)
+        
     }
     else{
         if(timeInt < 1000){
